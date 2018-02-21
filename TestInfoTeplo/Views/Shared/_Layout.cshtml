@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - TestInfoTeplo</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment include="Production" exclude="Development">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+
+   
+</head>
+<body>
+    <div class="custom header__top padding">
+        <div class="header__logo">
+            <a href="/"><img src="~/images/logo.png" /></a>
+
+        </div>
+        <div class="header__wrapper is-fixed">
+
+
+            <div class="custom header__top">
+                <div class="header__logo">
+                    <a href="/"><img src="~/images/logo.png"></a>
+                </div>
+                <div class="header__contact">
+                    <a href="tel:+375291045823" class="header__phone-wrapper">
+                        <i class="material-icons">phone_iphone</i>
+                        <div class="header__phone">
+                            <p>консультация и заказ</p>
+                            <p>+375 (29) <strong>104-58-23</strong> <img src="~/images/viber.png"></p>
+                        </div>
+                    </a>
+                    <a href="skype:arvas-online?chat" class="header__skype">
+                        <strong>arvas-online</strong>
+                        <img src="~/images/skype.png">
+                    </a>
+                   
+                    <a target="_blank" href="/online-order/index.php" class="header__order">
+                        <p>Заказ онлайн</p>
+                    </a>
+
+                    
+                </div>
+            </div>
+
+            <div class="header__bottom">
+
+            </div>
+            <div id="adaptive_bg" class="adaptive-menu__bg"></div>
+        </div>
+    </div>
+    <nav class="navbar navbar-inverse navbar-fixed-top menu__wrapper">
+        <div class="container">
+            
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <div class="footer__wrapper">
+
+
+            <div class="custom mdl-grid ">
+                <div class="mdl-cell mdl-cell--4-col mdl-cell--middle mdl-typography--text-center footer__copyright">
+                    <p>
+                        <a href="mailto:sales@arvas.by" class="footer__email mdl-cell--middle">sales@arvas.by</a>
+                    </p>
+                    <p>
+                        <a href="mailto:info@arvas.by" class="footer__email mdl-cell--middle">info@arvas.by</a>
+                    </p>
+                    <div>1993-2018, СООО «АРВАС»</div>
+                </div>
+                <div class="mdl-cell mdl-cell--4-col mdl-cell--middle mdl-typography--text-center">
+                    <div>
+                        <a href="tel:+80175021111" class="footer__phone mdl-cell--middle">8-017-502-11-11</a>
+                    </div>
+                    <div>многоканальный</div>
+                    <div class="footer__smm">
+                        <a href="https://vk.com/arvas_belarus" target="_blank">
+                            <img src="/images/vk_logo.png" alt="">
+                        </a>
+                        <a href="https://www.facebook.com/arvas.by" target="_blank">
+                            <img src="/images/fb_logo.png" alt="">
+                        </a>
+                        <a href="https://www.instagram.com/arvas_belarus" target="_blank">
+                            <img src="/images/insta_logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-cell--4-col mdl-cell--middle">
+                    <p class="footer__text">Республика Беларусь,<br> Минский район, п. Ратомка, ул. Парковая, 10</p>
+                    <p><a href="/contacts" class="footer__link">Все контакты</a></p>
+                </div>
+                <div class="mdl-cell mdl-cell--12-col developers">Разработка и продвижения сайта - <a href="http://grey-media.com" target="_blank" class="developers__link">GREYMedia</a></div>
+            </div>
+
+        </div>
+    </div>
+
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment include="Production" exclude="Development">
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+        </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

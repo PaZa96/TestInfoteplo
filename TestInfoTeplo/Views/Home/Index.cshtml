@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="container">
+    <table class="table" >
+        <thead>
+            <tr>
+                <th class="label">Name</th>
+                <th class="label">value1</th>
+                <th class="label">value2</th>
+                <th class="label">value3</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input class="form-control" type="text" id="name"></td>
+          
+                <td><input class="form-control" type="text" id="x1" OnKeyPress="NumericText()"></td>
+          
+                <td><input class="form-control" type="text" id="x2" OnKeyPress="NumericText()"></td>
+            
+                <td><input class="form-control" type="text" id="x3" OnKeyPress="NumericText()"></td>
+            </tr>
+        </tbody>
+    </table>
+    <br />
+    <input id="Submit1" class="btn btn-primary" type="button" value="submit" onclick="someFunc()" />
+    <div id="curve_chart" style="width: 100%; height: 500px"></div>
+</div>
